@@ -1,5 +1,13 @@
 # sdk-release-flow
 
+## 1.1.4
+
+### Patch Changes
+
+- 4c4cb76: Update docs
+- 58d0506: update workflow
+- 4c4cb76: update workflow
+
 ## 1.1.3
 
 ### Patch Changes
