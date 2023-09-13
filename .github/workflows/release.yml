@@ -30,4 +30,4 @@ jobs:
     - name: Create Tags
       if: steps.changesets.outputs.hasChangesets == 'false'
       run: |
-          npx changeset tag && git push origin --tags
+        npx changeset tag && git push origin --tags
