@@ -33,5 +33,7 @@
   }
 }
 ```
+5. Update the github actions
+6. Update workflow permissions (repo settings > actions > workflow permissions) to read and write permissions
 
 ## Release steps
