@@ -1,5 +1,11 @@
 # sdk-release-flow
 
+## 1.1.2
+
+### Patch Changes
+
+- 1d79cdb: tests
+
 ## 1.1.1
 
 ### Patch Changes
