@@ -1,5 +1,11 @@
 # sdk-release-flow
 
+## 2.0.2
+
+### Patch Changes
+
+- 714782c: update title of releases
+
 ## 2.0.1
 
 ### Patch Changes
