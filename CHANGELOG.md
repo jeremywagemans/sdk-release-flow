@@ -1,5 +1,11 @@
 # sdk-release-flow
 
+## 1.1.3
+
+### Patch Changes
+
+- 6598a42: Update docs
+
 ## 1.1.2
 
 ### Patch Changes
