@@ -2,4 +2,4 @@
 "sdk-release-flow": patch
 ---
 
-Update workflow
+update workflow

@@ -1,5 +1,23 @@
 # sdk-release-flow
 
+## 1.1.3
+
+### Patch Changes
+
+- 6598a42: Update docs
+
+## 1.1.2
+
+### Patch Changes
+
+- 1d79cdb: tests
+
+## 1.1.1
+
+### Patch Changes
+
+- ba6130b: Update workflow
+
 ## 1.1.0
 
 ### Minor Changes
