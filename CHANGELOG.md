@@ -1,5 +1,11 @@
 # sdk-release-flow
 
+## 1.1.8
+
+### Patch Changes
+
+- 9aa1968: update order workflow
+
 ## 1.1.7
 
 ### Patch Changes
