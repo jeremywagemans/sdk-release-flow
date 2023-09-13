@@ -1,5 +1,19 @@
 # sdk-release-flow
 
+## 2.0.0
+
+### Major Changes
+
+- 76e672f: Adding a breaking change
+
+### Minor Changes
+
+- 76e672f: Adding a new feature
+
+### Patch Changes
+
+- 76e672f: Some minor improvements
+
 ## 1.1.12
 
 ### Patch Changes
