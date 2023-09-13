@@ -1,5 +1,11 @@
 # sdk-release-flow
 
+## 1.1.5
+
+### Patch Changes
+
+- 1fd29c9: update workflow
+
 ## 1.1.4
 
 ### Patch Changes
