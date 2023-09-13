@@ -34,12 +34,13 @@ jobs:
       if: steps.changesets.outputs.hasChangesets == 'false'
       run: |
         npx changeset tag && git push origin --tags
+
     - name: Create new release
       if: steps.changesets.outputs.hasChangesets == 'false'
       run: |
         npx changeset tag && git push origin --tags
-        PACKAGE_VERSION=$(node -p "require('./package.json').version")"
-        LATEST_TAG=$(git describe --tags --abbrev=0)"
+        PACKAGE_VERSION=$(node -p "require('./package.json').version")
+        LATEST_TAG=$(git describe --tags --abbrev=0)
         if [ "v${PACKAGE_VERSION}" != "${LATEST_TAG}" ]; then
             echo "Version in package.json (${PACKAGE_VERSION}) is different from latest tag (${LATEST_TAG}). Creating a new release..."
             echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
