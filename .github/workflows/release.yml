@@ -50,7 +50,6 @@ jobs:
                 print;
             }
           ' CHANGELOG.md)
-          CHANGELOG="${CHANGELOG//###/##}"          
           gh release create v$PACKAGE_VERSION -t "Release v$PACKAGE_VERSION" -n "$CHANGELOG"
           # Add script to publish the package to public repository (e.g. maven central)
         else
