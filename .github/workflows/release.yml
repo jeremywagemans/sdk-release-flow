@@ -34,3 +34,19 @@ jobs:
       if: steps.changesets.outputs.hasChangesets == 'false'
       run: |
         npx changeset tag && git push origin --tags
+  create_release:
+    needs: changesets
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup GitHub CLI
+        run: |
+          gh auth login --with-token <<< "${{ secrets.GITHUB_TOKEN }}"
+
+      - name: Create GitHub Release
+        run: |
+          tag=${GITHUB_REF#refs/tags/}
+          echo "Creating release $tag"
