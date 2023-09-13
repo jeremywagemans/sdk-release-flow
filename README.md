@@ -37,3 +37,5 @@
 6. Update workflow permissions (repo settings > actions > workflow permissions) to read and write permissions
 
 ## Release steps
+
+1. Run `npx changeset` in your local terminal to submit changes made
