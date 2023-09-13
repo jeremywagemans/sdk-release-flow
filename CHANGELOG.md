@@ -1,5 +1,11 @@
 # sdk-release-flow
 
+## 1.1.10
+
+### Patch Changes
+
+- af7bdf6: test
+
 ## 1.1.9
 
 ### Patch Changes
