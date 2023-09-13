@@ -1,5 +1,11 @@
 # sdk-release-flow
 
+## 1.1.12
+
+### Patch Changes
+
+- 320474f: test
+
 ## 1.1.11
 
 ### Patch Changes
