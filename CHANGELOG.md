@@ -1,5 +1,11 @@
 # sdk-release-flow
 
+## 1.1.9
+
+### Patch Changes
+
+- e1883bb: check if tag is attached to current head
+
 ## 1.1.8
 
 ### Patch Changes
