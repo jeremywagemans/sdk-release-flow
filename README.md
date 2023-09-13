@@ -39,5 +39,3 @@
 ## Release steps
 
 1. Run `npx changeset` in your local terminal to submit changes made
-
-Add an instruction
