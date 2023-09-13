@@ -1,5 +1,11 @@
 # sdk-release-flow
 
+## 2.0.1
+
+### Patch Changes
+
+- 68300b1: Small update in the workflow
+
 ## 2.0.0
 
 ### Major Changes
