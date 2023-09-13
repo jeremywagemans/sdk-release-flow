@@ -1,5 +1,11 @@
 # sdk-release-flow
 
+## 1.1.1
+
+### Patch Changes
+
+- ba6130b: Update workflow
+
 ## 1.1.0
 
 ### Minor Changes
