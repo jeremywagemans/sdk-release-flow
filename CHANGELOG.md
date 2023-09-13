@@ -1,5 +1,11 @@
 # sdk-release-flow
 
+## 1.1.7
+
+### Patch Changes
+
+- 021ad84: update workflow to fix bash variables
+
 ## 1.1.6
 
 ### Patch Changes
