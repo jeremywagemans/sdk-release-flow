@@ -36,7 +36,7 @@ jobs:
         npx changeset tag && git push origin --tags
         COMMIT_TAG=$(git tag --points-at HEAD)
         echo "COMMIT_TAG: $COMMIT_TAG"
-        if [ -z "$COMMIT_TAG" ]; then
+        if [ -n "$COMMIT_TAG" ]; then
           PACKAGE_VERSION=$(node -p "require('./package.json').version")
           echo "A tag is attached to HEAD. Creating a new release..."
           echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
