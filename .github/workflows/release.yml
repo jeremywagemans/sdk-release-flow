@@ -30,6 +30,4 @@ jobs:
     - name: Create Tags
       if: steps.changesets.outputs.hasChangesets == 'false'
       run: |
-          npx changeset tag && git push origin --tags && echo "Tag created"
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          npx changeset tag && git push origin --tags
