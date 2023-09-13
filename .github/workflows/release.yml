@@ -33,10 +33,10 @@ jobs:
     - name: Create new release
       if: steps.changesets.outputs.hasChangesets == 'false'
       run: |
-        PACKAGE_VERSION=$(node -p "require('./package.json').version")
-        LATEST_TAG=$(git describe --tags --abbrev=0)
-        if [ "v$PACKAGE_VERSION" != "$LATEST_TAG" ]; then
-          npx changeset tag && git push origin --tags
+        npx changeset tag && git push origin --tags
+        COMMIT_TAG=$(git tag --points-at HEAD)
+        if [ -z "$COMMIT_TAG" ]; then
+          PACKAGE_VERSION=$(node -p "require('./package.json').version")
           echo "Version in package.json ($PACKAGE_VERSION) is different from latest tag ($LATEST_TAG). Creating a new release..."
           echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
           CHANGELOG=$(sed -n '/## [0-9]\+\.[0-9]\+\.[0-9]\+/,/## [0-9]\+\.[0-9]\+\.[0-9]\+/{
