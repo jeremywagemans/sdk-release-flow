@@ -33,19 +33,19 @@ jobs:
     - name: Create new release
       if: steps.changesets.outputs.hasChangesets == 'false'
       run: |
-        npx changeset tag && git push origin --tags
         PACKAGE_VERSION=$(node -p "require('./package.json').version")
         LATEST_TAG=$(git describe --tags --abbrev=0)
         if [ "v$PACKAGE_VERSION" != "$LATEST_TAG" ]; then
-            echo "Version in package.json ($PACKAGE_VERSION) is different from latest tag ($LATEST_TAG). Creating a new release..."
-            echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
-            CHANGELOG=$(sed -n '/## [0-9]\+\.[0-9]\+\.[0-9]\+/,/## [0-9]\+\.[0-9]\+\.[0-9]\+/{
-              # Do not include the lines with the version headings
-              /## [0-9]\+\.[0-9]\+\.[0-9]\+/!p
-              # Stop after the first block
-              /## [0-9]\+\.[0-9]\+\.[0-9]\+/q
-            }' ./CHANGELOG.md)
-            gh release create v$PACKAGE_VERSION -t "Release v$PACKAGE_VERSION" -n "Release for version v$PACKAGE_VERSION"
+          npx changeset tag && git push origin --tags
+          echo "Version in package.json ($PACKAGE_VERSION) is different from latest tag ($LATEST_TAG). Creating a new release..."
+          echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
+          CHANGELOG=$(sed -n '/## [0-9]\+\.[0-9]\+\.[0-9]\+/,/## [0-9]\+\.[0-9]\+\.[0-9]\+/{
+            # Do not include the lines with the version headings
+            /## [0-9]\+\.[0-9]\+\.[0-9]\+/!p
+            # Stop after the first block
+            /## [0-9]\+\.[0-9]\+\.[0-9]\+/q
+          }' ./CHANGELOG.md)
+          gh release create v$PACKAGE_VERSION -t "Release v$PACKAGE_VERSION" -n "Release for version v$PACKAGE_VERSION"
         else
-            echo "Version in package.json matches the latest tag. No new release needed."
+          echo "Version in package.json matches the latest tag. No new release needed."
         fi
