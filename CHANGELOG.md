@@ -1,5 +1,11 @@
 # sdk-release-flow
 
+## 1.1.11
+
+### Patch Changes
+
+- a6433bb: update workflow with different check
+
 ## 1.1.10
 
 ### Patch Changes
