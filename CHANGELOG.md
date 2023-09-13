@@ -1,5 +1,11 @@
 # sdk-release-flow
 
+## 1.1.0
+
+### Minor Changes
+
+- 17672ea: update README.md
+
 ## 1.0.0
 
 ### Major Changes
