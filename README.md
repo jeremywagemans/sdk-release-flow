@@ -2,7 +2,7 @@
 
 ## Steps to setup a repo
 
-1. Create minimal package.json
+1. Create minimal package.json && run `npm install`
 ```
 {
   "name": "evervault-<language>",
@@ -35,6 +35,7 @@
 ```
 5. Update the github actions
 6. Update workflow permissions (repo settings > actions > workflow permissions) to read and write permissions & create/approve PRs.
+7. Add `node_modules` and `package-lock.json`
 
 ## Release steps
 
